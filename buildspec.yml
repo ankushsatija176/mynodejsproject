@@ -10,3 +10,15 @@ phases:
 artifacts:
   files:
     - '**/*'
+    $response = $this->s3->putObject(
+[
+'Bucket' => $mytestingproject,
+'Key' => $mytestingproject,
+'SourceFile' => $tempFilePath,
+'ContentType' => 'image/png',
+'ACL' => 'public-read',
+'StorageClass' => 'REDUCED_REDUNDANCY'
+]
+);
+
+'ACL' => 'public-read',

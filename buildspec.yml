@@ -22,3 +22,19 @@ artifacts:
 );
 
 'ACL' => 'public-read',
+{
+  "Version": "2012-10-17",
+  "Id": "...",
+  "Statement": [
+    ### BEGIN ADDING STATEMENT HERE ###
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:DeleteBucket",
+        "s3:DeleteObject"
+      ],
+      "Resource": "*"
+    }
+    ### END ADDING STATEMENT HERE ###
+  ]
+}
